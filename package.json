@@ -7,23 +7,21 @@
     "node": ">=16"
   },
   "scripts": {
-    "devstart": "concurrently \"npm devserver\" \"npm start\"",
+    "devstart": "concurrently \"npm run devserver\" \"npm run start2\"",
     "server": "node ./bin/www.js",
     "devserver": "nodemon ./bin/www.js",
-    "start": "npm devstart",
     "heroku-start": "npm server",
+    "start": "npm run devstart",
     "start2": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@date-io/luxon": "^2.15.0",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.3",
-    "@mui/x-date-pickers": "5.0.0-beta.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.4.2",
