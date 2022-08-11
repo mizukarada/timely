@@ -14,7 +14,7 @@ var http = require('http');
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname + '/build/index.html'));
 // });
-const publicPath = path.join(__dirname, '..', 'public');
+const publicPath = path.join(__dirname, '..', 'build');
 console.log(__dirname)
 app.use(express.static(publicPath));
 app.get('*', (req, res) => {
