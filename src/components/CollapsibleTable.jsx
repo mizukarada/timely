@@ -79,7 +79,7 @@ function Row(props) {
   const handleDelete = () => {
     ;(async () => {
       const id = row._id
-      const response = await fetch(`http://localhost:5000/api/tasks/${id}`, {
+      const response = await fetch(`/api/tasks/${id}`, {
         method: 'DELETE',
         headers: {
           Accept: 'application/json',
