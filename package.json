@@ -11,6 +11,7 @@
     "server": "node ./bin/www.js",
     "devserver": "nodemon ./bin/www.js",
     "heroku-start": "npm server",
+    "heroku-postbuild": "npm build",
     "start": "npm run devstart",
     "start2": "react-scripts start",
     "build": "react-scripts build",
