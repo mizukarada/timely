@@ -16,14 +16,12 @@ export default function InnerRow(props) {
     const val = e.target.value
     setValue(val)
     const dt = DateTime.fromISO(val)
-    console.log('ptime', ptime)
     const res = DateTime.fromMillis(ptime).set({ hour: dt.hour, minute: dt.minute, second: dt.second }).toMillis()
     // update local state. Our parent housing this `InnerRow` compnonent will save the entire task list
     // and commit it to the database
     periods.forEach((p) => {
       if (p._id === period._id) {
         ptype === 'start' ? (p.start = res) : (p.end = res)
-        console.log('saved', res)
       }
       return p
     })
